@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<html>
+<head>
+<style>
+	body {
+		margin: 0;
+		background-color: #D8BFD8;
+	}
+	.header1{
+		color: #000000;
+		font-size: 16px;
+		text-decoration: none;
+	}
+	.header2{
+		color: #ff0000;
+		font-size: 15px;
+		text-decoration: underline;
+	}
+	.header3{
+		color: #000000;
+		font-size: 22.5px;
+		font-weight: bold;
+	}
+	td {
+		text-align: center;
+		vertical-align: center;
+		background-color: #e6fbff;
+		border-color: black;
+		border-style: solid;
+		border-width: 1px;
+		padding: 10px;
+	}
+	select {
+		width: 100%;
+		text-align: center;
+		color: #000000;
+	}
+	table {
+		width: 100%;
+		max-width: 450px;
+		margin: 0em;
+		border-color: black;
+		border-style: solid;
+		border-width: 1px;
+	}
+	li {
+		text-align: left;
+	}
+	.navbar {
+		overflow: hidden;
+		background-color: #333;
+		position: fixed;
+		top: 0;
+		width: 100%;
+	}
+
+	.navbar a {
+		float: left;
+		display: block;
+		color: #f2f2f2;
+		text-align: center;
+		padding: 14px 16px;
+		text-decoration: none;
+		font-size: 17px;
+	}
+
+	.navbar a:hover {
+		background: #ddd;
+		color: black;
+	}
+
+	.main {
+		padding: 10px;
+		margin-top: 0px;
+		height: 0px; /* Used to enable scrolling */
+	}
+	.collapsible {
+		background-color: #f1f1f1;
+		color: #0000ff;
+		cursor: pointer;
+		padding: 1px;
+		width: 10%;
+		border: none;
+		text-align: center;
+		outline: none;
+		font-size: 15px;
+	}
+	.active, .collapsible:hover {
+		background-color: #555;
+		color: #ffffff
+	}
+	.content {
+		padding: 0 18px;
+		max-height: 0;
+		overflow: hidden;
+		transition: max-height 0.2s ease-out;
+		background-color: #e6fbff;
+	}
+</style>
+</head>
+<body>
+<div class="navbar">
+	<a href="#home">Home</a>
+	<a href="Choice-Index.html">Index</a>
+	<a href="#FAQ">FAQ</a>
+	<a href="#contact">Contact</a>
+</div>
+<p class="main">
+</p>
+<div class="header3"><br>
+Gingival Description Examples
+</div><br>
+
+<table>
+	<tr>
+		<td class="header1" width="60%"><u><b>Characteristic</b></u></td>
+		<td class="header1" width="40%"><u><b>Descriptors</b></u></td>
+	</tr>
+	<tr>
+	<td class="header1">Severity
+	
+		<button class="collapsible">?</button>
+		<div class="content">
+			<img width="100%" height="100%" src="../images/HealthyGums.jpg">
+			<br><b>Healthy</b><p>
+			<img width="100%" height="100%" src="../images/SlightInflammationGums.jpg">
+			<br><b>Slight</b><p>
+			<img width="100%" height="100%" src="../images/ModerateInflammationGums.jpg">
+			<br><b>Moderate</b><p>
+			<img width="100%" height="100%" src="../images/SevereInflammationGums.jpg">
+			<br><b>Severe</b><p>
+			<img width="100%" height="100%" src="../images/ChronicInflammationGums.jpg">
+			<br><b>Chronic</b><p>
+		</div>
+	
+	</td>
+	<td>
+		<select id="severity_choice" size="1">
+			<option value="severity_healthy" style="background-color: #00ff00;">Healthy</option>
+			<option value="severity_slight" style="background-color: #f88379;">Slight Inflammation</option>
+			<option value="severity_mod" style="background-color: #e3242b;">Moderate Inflammation</option>
+			<option value="severity_severe" style="background-color: #b90e0a;">Severe Inflammation</option>
+			<option value="severity_chronic" style="background-color: #6100cc; color: #ffffff;">Chronically Inflamed</option>
+		</select>
+	</td>
+
+	</tr>
+	<tr>
+	<td class="header1">Color</td>
+	<td>
+		<select id="color_choice" size="1">
+			<option value="color_pink" style="background-color: #fdb9c8;">Pink</option>
+			<option value="color_coralPink" style="background-color: #f88379;">Coral Pink</option>
+			<option value="color_red" style="background-color: #e3242b;">Red</option>
+			<option value="color_darkRed" style="background-color: #b90e0a;">Dark Red</option>
+			<option value="color_purple" style="background-color: #6100cc; color: #ffffff;">Purple</option>
+			<option value="color_gray" style="background-color: #c5c5c5;">Gray</option>
+		</select>
+	</td>
+
+	</tr>
+	<tr>
+	<td class="header1">Consistency</td>
+	<td>
+		<select id="consistency_choice" size="1">
+			<option value="consistency_firm" style="background-color: #00ff00;">Firm</option>
+			<option value="consistency_swollen" style="background-color: #f88379;">Swollen</option>
+			<option value="consistency_spongy" style="background-color: #f88379;">Spongy</option>
+			<option value="consistency_edematous" style="background-color: #e3242b;">Edematous</option>
+			<option value="consistency_fibrotic" style="background-color: #6100cc; color: #ffffff;">Fibrotic</option>
+		</select>
+	</td>
+
+	</tr>
+	<tr>
+	<td class="header1">Texture</td>
+	<td>
+		<select id="texture_choice" size="1">
+			<option value="texture_stippled" style="background-color: #00ff00;">Stippled</option>
+			<option value="texture_glossy" style="background-color: #f88379;">Glossy</option>
+			<option value="texture_Smooth" style="background-color: #f88379;">Smooth</option>
+			<option value="texture_Leathery" style="background-color: #e3242b;">Leathery</option>
+		</select>
+	</td>
+
+	</tr>
+	<tr>
+	<td class="header1">Margin Contour</td>
+	<td>
+		<select id="margincontour_choice" size="1">
+			<option value="margincontour_knifeEdged" style="background-color: #00ff00;">Knife Edged</option>
+			<option value="margincontour_scalloped" style="background-color: #00ff00;">Scalloped</option>
+			<option value="margincontour_recessed" style="background-color: #f88379;">Recessed</option>
+			<option value="margincontour_rolled" style="background-color: #f88379;">Rolled</option>
+			<option value="margincontour_festooned" style="background-color: #b90e0a;">Festooned</option>
+			<option value="margincontour_clefted" style="background-color: #b90e0a;">Clefted</option>
+			<option value="margincontour_irregular" style="background-color: #6100cc; color: #ffffff;">Irregular</option>
+		</select>
+	</td>
+
+	</tr>
+	<tr>
+	<td class="header1">Papilla Contour</td>
+	<td>
+		<select id="papillacontour_choice" size="1">
+			<option value="papillacontour_pyramidal" style="background-color: #00ff00;">Pyramidal</option>
+			<option value="papillacontour_blunted" style="background-color: #f88379;">Blunted</option>
+			<option value="papillacontour_bulbous" style="background-color: #e3242b;;">Bulbous</option>
+			<option value="papillacontour_cratered" style="background-color: #b90e0a;">Cratered</option>
+			<option value="papillacontour_missing" style="background-color: #6100cc; color: #ffffff;">Missing</option>
+		</select>
+	</td>
+
+	</tr>
+	<tr>
+	<td class="header1">Bleeding and Exudate</td>
+	<td>
+		<select id="bleedingexudate_choice" size="1">
+			<option value="bleedingexudate_none" style="background-color: #00ff00;">No Bleeding or Exudate</option>
+			<option value="bleedingexudate_Bleeding" style="background-color: #e3242b;">Bleeding</option>
+			<option value="bleedingexudate_Exudate" style="background-color: #b90e0a;">Exudate</option>
+			<option value="bleedingexudate_Both" style="background-color: #6100cc; color: #ffffff;">Bleeding and Exudate</option>
+		</select>
+	</td>
+
+	</tr>
+	<tr>
+	<td class="header1">Plaque and Calculus</td>
+	<td>
+		<select id="plaquecalc_choice" size="1">
+			<option value="plaquecalc_none" style="background-color: #00ff00;">No Plaque and Calculus</option>
+			<option value="plaquecalc_Bleeding" style="background-color: #00ff00;">Minimal Plaque and Calculus</option>
+			<option value="plaquecalc_Exudate" style="background-color: #e3242b;">Moderate Plaque</option>
+			<option value="plaquecalc_Both" style="background-color: #e3242b;">Moderate Calculus</option>
+			<option value="plaquecalc_Exudate" style="background-color: #6100cc; color: #ffffff;">Moderate Plaque and Calculus</option>
+			<option value="plaquecalc_Exudate" style="background-color: #b90e0a;">Heavy Plaque</option>
+			<option value="plaquecalc_Exudate" style="background-color: #b90e0a;">Heavy Calculus</option>
+			<option value="plaquecalc_Exudate" style="background-color: #6100cc; color: #ffffff;">Heavy Plaque and Calculus</option>
+		</select>
+	</td>
+
+	</tr>
+	</table>
+
+<p>
+<table>
+	<tr>
+	<td>
+		<button onclick="myFunction()" style="background-color: #3CEC97;">Generate Example Gingival Description</button>
+	</td>
+	</tr>
+</table>
+<p>
+
+<table>
+	<tr>
+	<td>
+		<p id="gingivalDescription"></p>
+	</td>
+	</tr>
+	<tr>
+	<td>
+		<div class="header2">**Instructions For Localized areas**</div>
+		<ol>
+			<li>Change the word 'Generalized' to 'Localized'.</li>
+			<li>You can have more than one localized section.</li>
+			<li>Add the specific teeth numbers and locations related to the descriptor of choice.</li>
+			<li>Add the localized paragraph immediately following the generalized paragraph.</li>
+			<li>Example: "Localized magenta margin located around facials of: #10, 11, 20, 21, 30 with localized exudate facial #10."</li>
+			<li>Example 2: "Localized blunted papilla interproximal between 8-9, 9-10, and 24-25 with recessed margins facial #21, 24, 28, and 29."</li>
+		</ol>
+	</td>
+	</tr>
+</table>
+
+<script>
+
+var coll = document.getElementsByClassName("collapsible");
+var i;
+
+for (i = 0; i < coll.length; i++) {
+  coll[i].addEventListener("click", function() {
+    this.classList.toggle("active");
+    var content = this.nextElementSibling;
+    if (content.style.maxHeight){
+      content.style.maxHeight = null;
+    } else {
+      content.style.maxHeight = content.scrollHeight + "px";
+    } 
+  });
+}
+
+function myFunction() {
+	var severity = document.querySelector('#severity_choice').selectedOptions[0].text;
+	var color = document.querySelector('#color_choice').selectedOptions[0].text;
+	var consistency = document.querySelector('#consistency_choice').selectedOptions[0].text;
+	var texture = document.querySelector('#texture_choice').selectedOptions[0].text;
+	var margincontour = document.querySelector('#margincontour_choice').selectedOptions[0].text;
+	var papillacontour = document.querySelector('#papillacontour_choice').selectedOptions[0].text;
+	var bleedingexudate = document.querySelector('#bleedingexudate_choice').selectedOptions[0].text;
+	var plaquecalc = document.querySelector('#plaquecalc_choice').selectedOptions[0].text;
+	
+	document.getElementById("gingivalDescription").innerHTML = 
+	"Generalized " + severity.toLowerCase() + " " +
+	" characterized by: " + color.toLowerCase() + ", " + consistency.toLowerCase() + ", " + texture.toLowerCase() + 
+	" gingival tissue with " + margincontour.toLowerCase() +
+	" gingival margins and " + papillacontour.toLowerCase() +
+	" papilla. Gingiva presents with " + bleedingexudate.toLowerCase() + 
+	" as well as " + plaquecalc.toLowerCase() + ".";
+}
+
+</script>
+</body>
+</html>
